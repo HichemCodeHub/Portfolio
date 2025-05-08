@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <title>Portfolio - Boutemen Hichem</title>
+    <title>AIRGOS - Solution Digitale Aéroportuaire</title>
     <link rel="stylesheet" href="index.css" />
     <script src="index.js" defer></script>
   </head>
@@ -18,12 +18,12 @@
     <header>
       <nav>
         <div class="nav-link">
-          <li><a class="active" href="#home" data-section="home">Accueil</a></li>
-          <li><a href="#about" data-section="about">À propos</a></li>
-          <li><a href="#projects" data-section="projects">Projets</a></li>
-          <li><a href="#skills" data-section="skills">Compétences</a></li>
+          <li><a class="active" href="#home" data-section="home">Acceuil</a></li>
+          <li><a href="#présentation" data-section="présentation">Présentation</a></li>
+          <li><a href="#fonctionnalités" data-section="fonctionnalités">Nos fonctionnalités</a></li>
+          <li><a href="#compétences" data-section="compétences">Contact</a></li>
         </div>
-        <button class="btn-contact" onclick="window.location.href='mailto:hichem.boutemen@gmail.com';">Contact</button>
+        <button class="btn-contact" onclick="window.location.href='mailto:@airgos.com';">Contact</button>
         <div class="menu-icon">
           <i class="fa-solid fa-bars"></i>
         </div>
@@ -33,89 +33,256 @@
       <section class="presentation" id="home">
         <div class="presentation-content">
           <div class="presentation-txt">
-            <p>Je suis Boutemen Hichem,</p>
-            <h1>Développeur Front-end</h1>
-            <p>Je conçois des interfaces web</p>
-          </div>
-          <div class="presentation-logo">
-            <a href="https://github.com/HichemCodeHub" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/hichem-boutemen-458428347/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:hichem.boutemen@hotmail.com" target="_blank"><i class="fa-solid fa-square-envelope"></i></a>
+            <p>La solution digitale</p>
+            <h1>AIRGOS</h1>
+            <p>pensée pour les métiers de l’aéroportuaire et de la mobilité</p>
           </div>
         </div>
         <div class="circle-blur circle-1"></div>
         <div class="circle-blur circle-2"></div>
         <div class="circle-blur circle-3"></div>
       </section>
-      <section class="about" id="about">
+      <section class="about" id="présentation">
         <div class="title">
-          <h2>À propos de moi</h2>
+          <h2>Présentation</h2>
         </div>
         <div class="about-content">
-          <img src="assets/images/photo hichem.jpg" alt="Image de carnet et ordinateur">
+          <img src="assets/images/airgosimg.jpg" alt="Image de carnet et ordinateur">
           <div class="about-text">
             <p class="hi-text">Bonjour <span class="waving-hand">👋</span></p>
-            <p>Je suis Hichem, <span>développeur front-end</span> passionné par la création d’interfaces web à la fois esthétiques et fonctionnelles. Mon expérience m’a permis d’acquérir des compétences solides en <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span> et <span>React</span>. N’hésitez pas à découvrir mes <span>projets récents</span> !</p>
+            <p>Airgos est une plateforme modulaire et intelligente conçue pour répondre aux besoins spécifiques des acteurs du secteur aérien : compagnies, sous-traitants, handlers, fuelers, gestionnaires d’aéroports, et plus encore.
+
+              Airgos a su s’imposer comme une solution robuste, évolutive et pragmatique, intégrant des outils puissants de gestion RH, planification opérationnelle, exploitation des vols, facturation automatisée, et suivi qualité en temps réel.</p>
             <div class="btn-about">
-              <button class="cv" id="btn-cv"><i class="fa-solid fa-download"></i> CV</button>
-              <button class="location"><i class="fa-solid fa-location-dot"></i> Val-d'Oise, France</button>
+              <button class="cv" id="btn-cv"><i class="fab fa-linkedin"></i> </button> 
+              <button class="location"><i class="fa-solid fa-location-dot"></i> Paris, France</button>
             </div>
           </div>
         </div>
       </section>
-      <section class="projects" id="projects">
+      <section class="projects" id="fonctionnalités">
         <div class="title">
-          <h2>Projets</h2>
+          <h2>Nos fonctionnalités</h2>
         </div>
         <div class="card-container">
-          <div class="card">
-            <img src="assets/images/ohmyfood-img.webp" alt="Projet Ohmyfood">
+          <div class="card" data-module="rh">
+            <img src="assets/images/ressources humaines.jpg" alt="Image ressources humaines">
             <div class="card-content">
-              <p class="card-title">Ohmyfood <a href="https://github.com/HichemCodeHub/Ohmyfood" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
-              <p class="card-description">Ohmyfood est une startup qui référence les menus des restaurants à proximité. Ma mission était d’améliorer l’interface du site.</p>
+              <p class="card-title">Ressources humaines <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+              <p class="card-description">Optimiser les ressources humaines, suivez la vie de votre personnel simplement.</p>
               <div class="card-logo">
-                <i class="fa-brands fa-html5"></i>
-                <i class="fa-brands fa-sass"></i>
+                <i class="fa-regular fa-user"></i>
               </div>
             </div>
           </div>
-          <div class="card">
-            <img src="assets/images/sophie-bluel-img.webp" alt="Projet Sophie Bluel">
+          <div class="card" data-module="planning">
+            <img src="assets/images/planning.jpg" alt="Image planning">
             <div class="card-content">
-              <p class="card-title">Portfolio Sophie Bluel <a href="https://github.com/HichemCodeHub/Sophie-Bluel" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
-              <p class="card-description">Portfolio d’une architecte d’intérieur où l'on peut ajouter, supprimer et trier des projets. J’ai créé ce site dynamique en JavaScript et géré les routes API.</p>
+              <p class="card-title">Planning <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+              <p class="card-description">Planification, gestion des astreintes, badgeuse, réconciliation des heures et prépaie.</p>
               <div class="card-logo">
-                <i class="fa-brands fa-js"></i>
+                <i class="fa-regular fa-calendar-days"></i>
               </div>
             </div>
           </div>
-          <div class="card">
-            <img src="assets/images/kasa-img.webp" alt="Projet Kasa">
+          <div class="card" data-module="monitoring">
+            <img src="assets/images/monitoring.jpg" alt="Image monitoring">
             <div class="card-content">
-              <p class="card-title">Kasa <a href="https://github.com/HichemCodeHub/KASA" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
-              <p class="card-description">Kasa est une plateforme de location d’appartements. J’ai développé ce site en utilisant React.</p>
+              <p class="card-title">Exploitation & Monitoring <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+              <p class="card-description">Suivi en temps réel des vols, remontées terrain par photos, rapports dématérialisés depuis PC ou smartphone.</p>
               <div class="card-logo">
-                <i class="fa-brands fa-js"></i>
-                <i class="fa-brands fa-react"></i>
+                <i class="fa-solid fa-plane-circle-check"></i>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-module="facturation">
+            <img src="assets/images/facturation.jpg" alt="Image facturation">
+            <div class="card-content">
+              <p class="card-title">Facturation <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+              <p class="card-description">Tarification automatique, édition de factures, génération de fichiers comptables pour vos clients aériens et autres.</p>
+              <div class="card-logo">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-module="modulespe">
+            <img src="assets/images/modules spe.jpg" alt="Image module spécifiques">
+            <div class="card-content">
+              <p class="card-title">Modules Spécifiques <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+              <p class="card-description">Contrôle d’accès à bord, audits cabine, checklists nettoyage, gestion parking avion et objets trouvés etc ... gérer tous les aspects de vos activités et processus.</p>
+              <div class="card-logo">
+                <i class="fa-solid fa-rectangle-list"></i>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-module="mobile">
+            <img src="assets/images/mobile.jpg" alt="Image mobile">
+            <div class="card-content">
+              <p class="card-title">Version mobile <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+              <p class="card-description">Version mobile pour un accès sur le térrain et une communication en temps réel avec le personnel au sol.</p>
+              <div class="card-logo">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+            </div>
+          </div>
+          <div class="card" data-module="infra">
+            <img src="assets/images/infra.png" alt="Image Infrastructure & Support">
+            <div class="card-content">
+              <p class="card-title">Infrastructure & Support<i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+              <p class="card-description">Mise à disposition du set up.
+
+                Serveur dédié, backups, PCA, SSL, intégration FlightStat, support technique 7j/7 pour garantir la continuité de service.</p>
+              <div class="card-logo">
+                <i class="fa-solid fa-headset"></i>
+
+
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="skills" id="skills">
-        <div class="title">
-          <h2>Compétences</h2>
-        </div>
-        <div class="skills-container">
-          <div class="skills-btn"><i class="fa-brands fa-html5" style="color: #E44D26;"></i></div>
-          <div class="skills-btn"><i class="fa-brands fa-sass" style="color: #ec76d5;"></i></div>
-          <div class="skills-btn"><i class="fa-brands fa-js" style="color: #FFD43B;"></i></div>
-          <div class="skills-btn"><i class="fa-brands fa-react" style="color: #61DAFB;"></i></div>
-        </div>
-      </section>
+<!-- Modal pour "Ressources Humaines" -->
+<div id="modal-rh" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal-rh')"><i class="fa-solid fa-circle-xmark"></i></button>
+    <h2>Ressources Humaines</h2>
+    <h3>1.1 Gestion des dossiers du personnel</h3>
+    <p>Création et gestion des fiches employés (informations personnelles, contrats, formations, certifications…)</p>
+    <p>Suivi des dotations professionnelles (uniformes, badges, équipements…)</p>
+    <p>Gestion des accès et des droits utilisateurs dans le système</p>
+    <h3>1.2 Planification du personnel</h3>
+    <p>Interface intuitive pour la création et la modification des plannings</p>
+    <p>Gestion automatique des vacations selon les besoins et contraintes réglementaires</p>
+    <p>Prise en compte des absences (congés, maladie, astreintes…)</p>
+    <p>Assignation des tâches en fonction des qualifications et de la disponibilité des agents</p>
+  </div>
+</div>
+
+<!-- Modal pour "Exploitation & Monitoring" -->
+<div id="modal-monitoring" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal-monitoring')"><i class="fa-solid fa-circle-xmark"></i></button>
+    <h2>Module Exploitation & Monitoring</h2>
+    <h3>2.1 Gestion du programme de vols</h3>
+    <p>Import et gestion des vols programmés (vols réguliers, charters, déroutés…)</p>
+    <p>Modification et mise à jour des horaires en fonction des aléas opérationnels</p>
+    <p>Affichage des informations en temps réel</p>
+    <h3>2.2 Suivi des opérations sur le terrain</h3>
+    <p>Interface permettant de suivre l’avancement des opérations (arrivée, débarquement, nettoyage, refueling, embarquement…)</p>
+    <p>Prise de photos pour suivi des prestations et archivage</p>
+    <p>Consultation des informations et rapports via smartphones et PC</p>
+    <h3>2.3 Rapports d’intervention</h3>
+    <p>Génération automatique des comptes rendus de mission (délais, incidents, interventions…)</p>
+    <p>Signature électronique des agents et responsables</p>
+    <p>Archivage et consultation en ligne</p>
+  </div>
+</div>
+
+<!-- Modal pour "Planification" -->
+<div id="modal-planning" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal-planning')"><i class="fa-solid fa-circle-xmark"></i></button>
+    <h2>Planification</h2>
+    <h3>3.1 Contrôle de la réglementation du temps de travail</h3>
+    <p>Vérification automatique des temps de travail et des pauses réglementaires</p>
+    <p>Alertes en cas de dépassement des horaires légaux</p>
+    <p>Génération de rapports pour conformité avec la législation</p>
+    <h3>3.2 Badgeuse et système de pointage</h3>
+    <p>Pointage via badge aéroportuaire ou badge interne AIRGOS</p>
+    <p>Système de réconciliation automatique des horaires réalisés pour valider les heures supplémentaires et détecter les erreurs de pointage</p>
+    <p>Suivi en temps réel de la présence des agents sur site</p>
+    <h3>3.3 Gestion des astreintes et des interventions non planifiées</h3>
+    <p>Système d'alerte en cas de besoin d'intervention urgente</p>
+    <p>Gestion des rappels de personnel en fonction des disponibilités</p>
+    <p>Historisation des interventions et des prises d’astreintes</p>
+    <h3>3.4 Édition des récapitulatifs de prépaie</h3>
+    <p>Calcul automatique des heures travaillées</p>
+    <p>Prise en compte des primes et des majorations (nuit, dimanche, jours fériés)</p>
+    <p>Export des données pour intégration dans les logiciels de paie</p>
+  </div>
+</div>
+
+<!-- Modal pour "Facturation & Gestion financière" -->
+<div id="modal-facturation" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal-facturation')"><i class="fa-solid fa-circle-xmark"></i></button>
+    <h2>Module Facturation & Gestion financière</h2>
+    <h3>4.1 Gestion des tarifications</h3>
+    <p>Paramétrage des grilles tarifaires selon le type de prestation</p>
+    <p>Calcul automatique des coûts en fonction des prestations réalisées</p>
+    <p>Tarification spécifique selon les accords avec chaque compagnie ou prestataire</p>
+    <h3>4.2 Facturation automatique</h3>
+    <p>Génération et envoi automatique des factures selon les services rendus</p>
+    <p>Gestion des avoirs et des ajustements tarifaires</p>
+    <p>Suivi des paiements et relances en cas d’impayés</p>
+    <h3>4.3 Génération des fichiers comptables</h3>
+    <p>Export des données vers les logiciels comptables</p>
+    <p>Gestion des taxes et TVA selon la réglementation en vigueur</p>
+    <p>Suivi analytique des revenus et charges par activité</p>
+  </div>
+</div>
+
+<!-- Modal pour "Modules complémentaires" -->
+<div id="modal-modulespe" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal-modulespe')"><i class="fa-solid fa-circle-xmark"></i></button>
+    <h2>Modules complémentaires</h2>
+    <h3>5.1 Gestion des audits cabine</h3>
+    <p>Check-list numérique pour l’inspection des cabines (propreté, équipements, maintenance…)</p>
+    <p>Évaluation de la conformité selon les standards des compagnies aériennes</p>
+    <p>Reporting et traçabilité des anomalies constatées</p>
+
+    <h3>5.2 Gestion des autorisations d’accès à bord</h3>
+    <p>Gestion et suivi des autorisations temporaires et permanentes</p>
+    <p>Vérification des badges et habilitations avant accès aux aéronefs</p>
+    <p>Génération de rapports d’accès et traçabilité des entrées/sorties</p>
+
+    <h3>5.3 Gestion du traitement ménage</h3>
+    <p>Planification et suivi des équipes de nettoyage</p>
+    <p>Contrôle qualité via checklist numérique</p>
+    <p>Reporting en temps réel sur l’état de propreté des avions</p>
+
+    <h3>5.4 Gestion du parc de véhicules</h3>
+    <p>Suivi des entrées et sorties des véhicules sur l’aéroport</p>
+    <p>Maintenance et contrôle technique des véhicules</p>
+    <p>Gestion des réservations et affectations aux équipes</p>
+
+    <h3>5.5 Gestion des objets trouvés</h3>
+    <p>Enregistrement des objets récupérés dans l’aéroport</p>
+    <p>Attribution et restitution aux propriétaires</p>
+    <p>Archivage des objets non réclamés</p>
+    </div>
+</div>
+
+<!-- Modal pour "Intégration & Interopérabilité" -->
+<div id="modal-mobile" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal-mobile')"><i class="fa-solid fa-circle-xmark"></i></button>
+    <h2>Module Intégration & Interopérabilité</h2>
+    <h3>6. Accessibilité mobile</h3>
+    <p>Toutes les fonctionnalités de la solution AIRGOS sont disponibles en version mobile, permettant une utilisation directe sur le terrain. Cela garantit une communication en temps réel avec le personnel au sol, une meilleure réactivité et une efficacité accrue des opérations aéroportuaires.</p>
+  </div>
+</div>
+
+<!-- Modal pour "Infrastructure & Support" -->
+<div id="modal-infra" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal-infra')"><i class="fa-solid fa-circle-xmark"></i></button>
+    <h2>Module Infrastructure & Support</h2>
+    <h3>6.1 Hébergement & Sécurité</h3>
+    <p>Serveur dédié sécurisé</p>
+    <p>Système de backup et site de sauvegarde</p>
+    <p>Certificat SSL et plan de continuité d’activité (PCA)</p>
+    <h3>6.2 Assistance & Veille technologique</h3>
+    <p>Support 7/7 via tickets et emails directs</p>
+    <p>Mise à jour continue des fonctionnalités</p>
+    <p>Veille technologique pour amélioration continue du système</p>
+  </div>
+</div>
     </main>
     <footer>
-      <p>Copyright © Boutemen Hichem</p>
+      <p> © 2025 AIRGOS. Tous droits réservés.</p>
+      <p>Adresse : 33 avenue de Wagram, 75017 Paris | Téléphone : +33 1 | Email : @airgos.com</p>
     </footer>
   </body>
 </html>

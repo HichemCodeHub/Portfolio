@@ -2,9 +2,9 @@
 html,
 body {
   margin: 0;
-  background-color: #12243d;
+  background-color: #f2f2f2;
   height: 100%;
-  color: white;
+  color: rgb(0, 0, 0);
   font-family: "Noto Sans", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -84,7 +84,7 @@ nav .nav-link a {
   transition: background 0.3s ease;
 }
 nav .nav-link a:link, nav .nav-link a:visited {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 nav .nav-link a:hover, nav .nav-link a.active {
   background: rgba(255, 255, 255, 0.15);
@@ -241,7 +241,7 @@ main .title {
   font-size: 2.5rem;
 }
 main .title h2 {
-  background: -webkit-linear-gradient(left, #28f1fe, #7873f5);
+  background: -webkit-linear-gradient(left, #003392, #00000c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -251,24 +251,24 @@ main .title h2 {
 }
 @-webkit-keyframes glow-animation {
   0% {
-    text-shadow: 0 0 5px rgba(40, 241, 254, 0.7); /* Ombre textuelle moins intense */
+    text-shadow: 0 0 5px rgba(1, 0, 77, 0.7); /* Ombre textuelle moins intense */
   }
   50% {
     text-shadow: none; /* Pas d'ombre pour perdre la brillance */
   }
   100% {
-    text-shadow: 0 0 5px rgba(40, 241, 254, 0.7);
+    text-shadow: 0 0 5px rgba(1, 0, 77, 0.7);
   }
 }
 @keyframes glow-animation {
   0% {
-    text-shadow: 0 0 5px rgba(40, 241, 254, 0.7); /* Ombre textuelle moins intense */
+    text-shadow: 0 0 5px rgba(1, 0, 77, 0.7); /* Ombre textuelle moins intense */
   }
   50% {
     text-shadow: none; /* Pas d'ombre pour perdre la brillance */
   }
   100% {
-    text-shadow: 0 0 5px rgba(40, 241, 254, 0.7);
+    text-shadow: 0 0 5px rgba(1, 0, 77, 0.7);
   }
 }
 main .about-content {
@@ -367,40 +367,7 @@ main .about-content .about-text .hi-text .waving-hand {
           transform-origin: 70% 70%;
   display: inline-block;
 }
-@-webkit-keyframes wave-animation {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  10% {
-    -webkit-transform: rotate(14deg);
-            transform: rotate(14deg);
-  }
-  20% {
-    -webkit-transform: rotate(-8deg);
-            transform: rotate(-8deg);
-  }
-  30% {
-    -webkit-transform: rotate(14deg);
-            transform: rotate(14deg);
-  }
-  40% {
-    -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg);
-  }
-  50% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
-  }
-  60% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
+
 @keyframes wave-animation {
   0% {
     -webkit-transform: rotate(0deg);
@@ -509,14 +476,13 @@ main .about-content .about-text .location {
 main .projects .card-container {
   max-width: 1440px;
   margin: 120px 0 210px;
-  height: 1500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: column;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -524,11 +490,13 @@ main .projects .card-container {
       -ms-flex-align: center;
           align-items: center;
   gap: 10%;
+  flex-wrap: wrap
 }
 main .projects .card-container .card {
-  height: 100%;
+  width: 350px; /* taille fixe ou utilise flex-basis/flex-grow si besoin */
+  height: 450px; /* adapte à ton contenu */
+  flex-shrink: 0;
   position: relative;
-  width: 50%;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -544,6 +512,7 @@ main .projects .card-container .card {
           box-shadow: -10px 0 20px -10px #7873f5, 10px 0 20px -10px #28f1fe;
   -webkit-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-bottom: 5%;
 }
 main .projects .card-container .card::before {
   content: "";
@@ -710,6 +679,85 @@ footer p {
   font-size: 1.5rem;
 }
 
+.modal {
+  display: none; /* S'assurer qu'elle est cachée au départ */
+  position: fixed; /* Position fixe pour la modale */
+  top: 55%; /* Positionner la modale au centre verticalement */
+  left: 50%; /* Positionner la modale au centre horizontalement */
+  transform: translate(-50%, -50%); /* Ajuster pour que le centre de la modale soit au centre de l'écran */
+  background: linear-gradient(135deg, #0d0031 0%, rgba(5, 0, 49, 0.5) 100%);
+  z-index: 1000; /* Assurez-vous que la modale soit au-dessus du contenu */
+  width: 80%; /* Largeur de la modale */
+  max-width: 600px; /* Largeur maximale de la modale */
+  max-height: 80vh; /* Limiter la hauteur à 80% de la hauteur de la fenêtre */
+  overflow-y: auto; /* Permet le défilement vertical si le contenu dépasse */
+  padding: 20px; /* Espacement à l'intérieur de la modale */
+  border-radius: 8px; /* Bords arrondis de la modale */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour l'effet de profondeur */
+  color: rgb(255, 255, 255); /* Texte en blanc */
+}
+
+/* Contenu de la modale */
+.modal-content {
+  background-color: transparent; /* Le fond est transparent pour laisser la couleur de la modale apparente */
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;
+}
+
+/* Style pour le bouton de fermeture */
+.modal .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--primary);  /* Choisis la couleur qui te convient */
+  color: #ffffff;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Effet au survol et focus */
+.modal .close-btn:hover,
+.modal .close-btn:focus {
+  background-color: var(--focus);  /* Peut aussi être une couleur différente */
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.modal .close-btn:active {
+  transform: scale(1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Personnalisation de la barre de défilement */
+.modal::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: #888; /* Couleur du thumb (partie cliquable de la barre) */
+  border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Couleur quand on survole le thumb */
+}
+
+.modal::-webkit-scrollbar-track {
+  background: #222; /* Couleur du rail de la barre de défilement */
+  border-radius: 10px;
+}
+
+
 @media (max-width: 1330px) {
   main .title {
     margin: 5% 5% 0 5%;
@@ -754,7 +802,6 @@ footer p {
     padding: 20px 50px;
   }
   main .projects .card-container {
-    height: 1000px;
     margin: 50px 0 10%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -762,11 +809,12 @@ footer p {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column;
+            flex-direction: row;
     gap: 5%;
   }
   main .projects .card-container .card {
-    width: 60%;
+    width: 40%;
+    margin-bottom: 5%;
   }
   main .skills-container {
     margin: 40px 0 150px 0;
@@ -813,7 +861,7 @@ footer p {
   nav .menu-icon {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; /* Afficher le menu burger */
+    display: flex; /* Afficher le menu */
     border-radius: 25px;
     background-color: rgba(31, 64, 111, 0.8);
   }

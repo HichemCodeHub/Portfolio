@@ -21,9 +21,9 @@
           <li><a class="active" href="#home" data-section="home">Acceuil</a></li>
           <li><a href="#présentation" data-section="présentation">Présentation</a></li>
           <li><a href="#fonctionnalités" data-section="fonctionnalités">Nos fonctionnalités</a></li>
-          <li><a href="#compétences" data-section="compétences">Contact</a></li>
+          <li><a href="#contact" data-section="contact">Contact</a></li>
         </div>
-        <button class="btn-contact" onclick="window.location.href='mailto:@airgos.com';">Contact</button>
+
         <div class="menu-icon">
           <i class="fa-solid fa-bars"></i>
         </div>
@@ -279,6 +279,32 @@
     <p>Veille technologique pour amélioration continue du système</p>
   </div>
 </div>
+
+<!-- Section Contact -->
+<section id="contact" style="padding: 50px 0; background-color: #f4f4f4;">
+  <div class="container">
+    <div class="title">
+      <h2>Contactez-nous</h2>
+    </div>
+    <form action="/submit-form" method="POST" style="max-width: 600px; margin: 0 auto;">
+      <div style="margin-bottom: 20px;">
+        <label for="name" style="font-size: 1.1em;">Nom</label>
+        <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; font-size: 1em; border: 1px solid #ccc; border-radius: 5px;">
+      </div>
+      <div style="margin-bottom: 20px;">
+        <label for="email" style="font-size: 1.1em;">Email</label>
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; font-size: 1em; border: 1px solid #ccc; border-radius: 5px;">
+      </div>
+      <div style="margin-bottom: 20px;">
+        <label for="message" style="font-size: 1.1em;">Message</label>
+        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; font-size: 1em; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+      </div>
+      <div style="text-align: center;">
+        <button type="submit" style="padding: 10px 20px; font-size: 1.1em; background-color: #4299fd; color: white; border: none; border-radius: 5px; cursor: pointer;">Envoyer</button>
+      </div>
+    </form>
+  </div>
+</section>
     </main>
     <footer>
       <p> © 2025 AIRGOS. Tous droits réservés.</p>
